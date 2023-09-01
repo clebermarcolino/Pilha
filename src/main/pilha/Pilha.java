@@ -1,3 +1,5 @@
+package main.pilha;
+
 public class Pilha {
     private int topo;
     private int[] pilha;
@@ -8,18 +10,14 @@ public class Pilha {
     }
 
     public boolean isEmpty() { // verifica se a pilha está vazia
-        if(topo == 0) {
-            return true;
-        }
-        return false;
+        return topo == 0;
     }
 
     public void push(int valor) { // adiciona um elemento na pilha
         if (topo >= pilha.length) {
             resize(pilha.length * 2);
         }
-        pilha[topo] = valor;
-        topo++;
+        pilha[topo++] = valor;
     }
 
 
